@@ -1,8 +1,6 @@
-import numpy as np
 import tensorflow as tf
 
 
-# def amp_to_db(x, eps=tf.constant(np.finfo(np.float64).eps), top_db=40):
 def amp_to_db(x, eps=1e-16, top_db=40):
     """
     Convert the input tensor from amplitude to decibel scale.

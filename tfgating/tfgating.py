@@ -3,9 +3,9 @@ from typing import Optional
 import tensorflow as tf
 
 if __name__ == "__main__":
-    from .utils import amp_to_db, linspace, temperature_sigmoid
-else:
     from utils import amp_to_db, linspace, temperature_sigmoid
+else:
+    from .utils import amp_to_db, linspace, temperature_sigmoid
 
 
 class TFGating(tf.keras.Model):
