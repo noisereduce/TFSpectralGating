@@ -1,6 +1,6 @@
 # TensorFlowSpectralGating
 TFSpectralGate is a TensorFlow-based implementation of Spectral Gating, an algorithm for denoising audio signals.
- It is designed to inherit from the nn.Module class, which allows it to be used either as a standalone module or as part of a larger neural network architecture.
+ It is designed to inherit from the tf.keras.Model class, which allows it to be used either as a standalone module or as part of a larger neural network architecture.
 
 The algorithm was originally proposed by Sainburg et al [1] and was previously implemented in a GitHub repository [2]. The current implementation was developed in TensorFlow to improve computational efficiency and reduce run time.
 
