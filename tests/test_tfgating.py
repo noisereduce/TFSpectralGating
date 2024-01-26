@@ -1,5 +1,7 @@
 import unittest
+
 import tensorflow as tf
+
 from tfgating import TFGating as TG
 
 
@@ -39,5 +41,5 @@ class TestTFGating(unittest.TestCase):
         self.assertIsNotNone(enhanced_speech)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
