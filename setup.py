@@ -12,7 +12,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     license="MIT",
-    url="https://github.com/noisereduce/TensorFlowGating",
+    url="https://github.com/noisereduce/TFSpectralGating",
     packages=setuptools.find_packages(
         exclude=["tests", "*.tests", "*.tests.*", "tests.*", "tests.*"]
     ),
