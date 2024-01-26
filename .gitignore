@@ -1,0 +1,5 @@
+/tfgating.egg-info/*
+/build/*
+/dist/*
+/.idea/*
+/dist/

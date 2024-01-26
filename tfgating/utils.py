@@ -1,5 +1,6 @@
-import tensorflow as tf
 import numpy as np
+import tensorflow as tf
+
 
 # def amp_to_db(x, eps=tf.constant(np.finfo(np.float64).eps), top_db=40):
 def amp_to_db(x, eps=1e-16, top_db=40):
@@ -20,6 +21,7 @@ def amp_to_db(x, eps=1e-16, top_db=40):
 
     return tf.maximum(x_db, (tf.reduce_max(x_db, axis=0) - top_db)[tf.newaxis, :])
 
+
 def temperature_sigmoid(x, x0, temp_coeff):
     """
     Apply a sigmoid function with temperature scaling.
@@ -32,7 +34,8 @@ def temperature_sigmoid(x, x0, temp_coeff):
     Returns:
         tf.Tensor -- Output tensor after applying the sigmoid with temperature scaling.
     """
-    return 1 / (1 + tf.math.exp((x - x0) / temp_coeff))
+    return tf.math.sigmoid((x - x0) / temp_coeff)
+
 
 def linspace(start, stop, num=50, endpoint=True):
     """
@@ -58,4 +61,3 @@ def linspace(start, stop, num=50, endpoint=True):
     else:
         step = (stop - start) / num
         return tf.range(start, stop, step)
-    
